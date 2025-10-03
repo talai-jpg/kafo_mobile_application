@@ -3,6 +3,8 @@ import 'package:kafo_app/features/onboarding/onboarding_screens.dart';
 import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -15,11 +17,11 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(milliseconds: 1500), () {
+    Future.delayed(Duration(milliseconds: 600), () {
       setState(() => _showText = true);
     });
 
-    Future.delayed(Duration(milliseconds: 600), () {
+    Future.delayed(Duration(milliseconds: 1500), () {
       setState(() => _showLogo = true);
     });
 
@@ -45,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
               child: AnimatedSlide(
                 duration: Duration(milliseconds: 400),
                 offset: _showText ? Offset(0, 0) : Offset(0, 1),
-                child: Image.asset("assets/images/image2.png", width: 120),
+                child: Image.asset("assets/images/image1.png", width: 120),
               ),
             ),
 
@@ -55,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
               child: AnimatedSlide(
                 duration: Duration(milliseconds: 400),
                 offset: _showLogo ? Offset(0, 0) : Offset(0, 1),
-                child: Image.asset("assets/images/image1.png", width: 80),
+                child: Image.asset("assets/images/image2.png", width: 80),
               ),
             ),
           ],

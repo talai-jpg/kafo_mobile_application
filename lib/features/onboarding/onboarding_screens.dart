@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/features/onboarding/widgets/onboarding_footer.dart';
 import 'package:kafo_app/features/onboarding/widgets/onboarding_header.dart';
 import 'package:kafo_app/features/onboarding/widgets/onboarding_page.dart';
-import 'package:kafo_app/features/onboarding/widgets/onboarding_footer.dart';
 import 'package:kafo_app/features/onboarding/widgets/onboarding_action.dart';
 import 'package:kafo_app/features/onboarding/data/onboarding_data.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kafo_app/features/sign_up/screen/sign_up.dart';
+import 'package:kafo_app/features/complaints/screen/complaints/screen/splash_screen.dart';
 import 'package:kafo_app/theme/app_theme.dart';
 
 void main() {
@@ -12,13 +12,12 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const Directionality(
+      home: Directionality(
         textDirection: TextDirection.rtl,
-        child: SignUp(),
+        child: SplashScreen(),
       ),
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
-      
     );
   }
 }

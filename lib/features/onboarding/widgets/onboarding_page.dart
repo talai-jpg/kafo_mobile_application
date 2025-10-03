@@ -29,16 +29,12 @@ class OnboardingPage extends StatelessWidget {
               child: Image.asset(image, fit: BoxFit.contain),
             ),
             Positioned(
-              bottom: screenHeight * 0.01,
+              bottom: screenHeight * 0.001,
               right: screenWidth * 0.02,
               child: Text(
                 title,
                 textAlign: TextAlign.right,
-                style: TextStyle(
-                  fontSize: screenWidth * 0.1,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xff1a3e2e),
-                ),
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
             ),
           ],
@@ -47,11 +43,7 @@ class OnboardingPage extends StatelessWidget {
         Text(
           subtitle,
           textAlign: TextAlign.right,
-          style: TextStyle(
-            fontSize: screenWidth * 0.05,
-            color: const Color(0xff1a3e2e),
-            height: 1.5,
-          ),
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
       ],
     );

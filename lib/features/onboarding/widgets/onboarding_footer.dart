@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kafo_app/features/home/screen/home_screen.dart';
+import 'package:kafo_app/features/sign_up/screen/sign_up.dart';
 
 class OnboardingFooter extends StatelessWidget {
   final int currentPage;
@@ -52,7 +52,7 @@ class OnboardingFooter extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  MaterialPageRoute(builder: (context) => const SignUp()),
                 );
               },
               child: Text(

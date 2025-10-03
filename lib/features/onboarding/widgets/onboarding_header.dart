@@ -22,13 +22,9 @@ class OnboardingHeader extends StatelessWidget {
         children: [
           Text(
             "تسجيل الدخول",
-            style: TextStyle(
-              fontSize: screenWidth * 0.04,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xff1a3e2e),
-            ),
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
-          SizedBox(width: screenWidth * 0.17),
+          SizedBox(width: screenWidth * 0.1),
           Image.asset(
             "assets/images/image3.png",
             width: screenWidth * 0.09,
