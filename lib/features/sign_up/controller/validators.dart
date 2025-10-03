@@ -26,8 +26,6 @@ class Validators {
     return null;
   }
 
-
-
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
       return "الرجاء إدخال كلمة المرور";
