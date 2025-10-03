@@ -42,7 +42,7 @@ class AppTheme {
       ),
       titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
 
-      titleSmall: TextStyle(fontSize: 14, color: AppColor.black),
+      titleSmall: TextStyle(fontSize: 12, color: AppColor.black),
     ),
 
     //Text buttton Style
