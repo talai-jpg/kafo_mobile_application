@@ -63,7 +63,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             screenWidth: screenWidth,
                           ),
                           const Spacer(),
-                          // ✅ الآن الفوتر يظهر في كل الصفحات
                           OnboardingFooter(
                             currentPage: _currentPage,
                             totalPages: onboardingData.length,
