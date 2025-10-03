@@ -34,7 +34,7 @@ class AppTheme {
       ),
       titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
 
-      titleSmall: TextStyle(fontSize: 14, color: AppColor.black),
+      titleSmall: TextStyle(fontSize: 12, color: AppColor.black),
     ),
 
     //Text buttton Style
@@ -47,6 +47,12 @@ class AppTheme {
           decoration: TextDecoration.underline,
         ),
       ),
+    ),
+
+    checkboxTheme: CheckboxThemeData(
+      fillColor: WidgetStateProperty.all(AppColor.secondary_100),
+      checkColor: WidgetStateProperty.all(AppColor.primary_400),
+      side: BorderSide(color: AppColor.primary_400),
     ),
   );
 }
