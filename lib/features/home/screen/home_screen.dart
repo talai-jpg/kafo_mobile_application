@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  final String userName;
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
+  const HomeScreen({super.key, required this.userName});
 
-class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-    
-   );
+    return Scaffold();
   }
 }

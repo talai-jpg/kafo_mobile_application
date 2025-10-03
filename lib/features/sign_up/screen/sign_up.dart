@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/sign_up/controller/validators.dart';
-import 'package:kafo_app/common/widgets/custom_text_field.dart';
+import 'package:kafo_app/features/sign_up/widget/custom_text_field.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -154,7 +154,16 @@ class _SignUpState extends State<SignUp> {
                     height: 40,
                     child: ElevatedButton(
                       onPressed: () {
-                        if (_formKey.currentState!.validate() && acceptTerms) {}
+                        if (_formKey.currentState!.validate() && acceptTerms) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NavigationScreen(
+                                userName: nameController.text,
+                              ),
+                            ),
+                          );
+                        }
                       },
                       child: Text('التسجيل'),
                     ),
