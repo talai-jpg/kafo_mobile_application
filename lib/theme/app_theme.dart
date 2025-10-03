@@ -26,13 +26,13 @@ class AppTheme {
       headlineLarge: GoogleFonts.changa(
         fontSize: 48,
         fontWeight: FontWeight.bold,
-        color: AppColor.black,
+        color: AppColor.primary_500,
       ),
 
       headlineMedium: TextStyle(
         fontSize: 15,
         fontWeight: FontWeight.w600,
-        color: AppColor.black,
+        color: AppColor.primary_500,
       ),
 
       titleLarge: TextStyle(

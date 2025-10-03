@@ -12,10 +12,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Directionality(
-        textDirection: TextDirection.rtl,
-        child: SplashScreen(),
-      ),
+      locale: const Locale('ar'),
+      home: SplashScreen(),
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
     );

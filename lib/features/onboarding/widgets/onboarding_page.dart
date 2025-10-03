@@ -43,7 +43,7 @@ class OnboardingPage extends StatelessWidget {
         Text(
           subtitle,
           textAlign: TextAlign.right,
-          style: Theme.of(context).textTheme.headlineSmall,
+          style: Theme.of(context).textTheme.headlineMedium,
         ),
       ],
     );
