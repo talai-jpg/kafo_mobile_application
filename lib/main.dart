@@ -13,11 +13,12 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // Set default locale to Arabic for RTL support"
       locale: const Locale('ar'),
-      // تحديد اللغات المدعومة
+      // Specify supported languages
       supportedLocales: const [Locale('ar', 'SA'), Locale('en', 'US')],
 
-      // تفعيل مندوبي التوطين
+      // Activate localization
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
