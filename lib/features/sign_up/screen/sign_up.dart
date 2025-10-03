@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/sign_up/controller/validators.dart';
 import 'package:kafo_app/features/sign_up/widget/custom_text_field.dart';
+import 'package:kafo_app/features/navigation/screen/nav_screen.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -56,16 +57,17 @@ class _SignUpState extends State<SignUp> {
                     ),
                     Text(
                       'سجل معلوماتك لإنشاء حساب جديد',
-                      style: TextStyle(color: AppColor.white, fontWeight: FontWeight.bold,
-                      shadows: [
-                        Shadow(
-                          offset: Offset(0, 4),
-                          blurRadius: 4,
-                          color: AppColor.containerShadow
-                        )
-                      ]
+                      style: TextStyle(
+                        color: AppColor.white,
+                        fontWeight: FontWeight.bold,
+                        shadows: [
+                          Shadow(
+                            offset: Offset(0, 4),
+                            blurRadius: 4,
+                            color: AppColor.containerShadow,
+                          ),
+                        ],
                       ),
-                      
                     ),
                   ],
                 ),
@@ -132,14 +134,14 @@ class _SignUpState extends State<SignUp> {
                           children: [
                             TextSpan(
                               text: "أوافق على",
-                              style: Theme.of(context).textTheme.titleSmall
+                              style: Theme.of(context).textTheme.titleSmall,
                             ),
                             TextSpan(
                               text: "الشروط والأحكام",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: AppColor.black,
-                                fontSize: 12
+                                fontSize: 12,
                               ),
                             ),
                           ],
@@ -153,7 +155,16 @@ class _SignUpState extends State<SignUp> {
                     height: 40,
                     child: ElevatedButton(
                       onPressed: () {
-                        if (_formKey.currentState!.validate() && acceptTerms) {}
+                        if (_formKey.currentState!.validate() && acceptTerms) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NavigationScreen(
+                                userName: nameController.text,
+                              ),
+                            ),
+                          );
+                        }
                       },
                       child: Text('التسجيل'),
                     ),
@@ -162,8 +173,9 @@ class _SignUpState extends State<SignUp> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('لديك حساب بالفعل؟',
-                      style: Theme.of(context).textTheme.titleSmall ,
+                      Text(
+                        'لديك حساب بالفعل؟',
+                        style: Theme.of(context).textTheme.titleSmall,
                       ),
                       TextButton(
                         style: TextButton.styleFrom(padding: EdgeInsets.zero),
