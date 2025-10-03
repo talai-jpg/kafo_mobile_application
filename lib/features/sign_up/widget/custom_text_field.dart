@@ -44,7 +44,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
         ),
         const SizedBox(height: 8),
         SizedBox(
-          height: 40,
           width: 328,
           child: TextFormField(
             controller: widget.controller,
@@ -52,10 +51,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
             validator: widget.validator,
             decoration: InputDecoration(
               hintText: widget.hint,
-              prefixIcon: SizedBox(
-                width: 24,
-                height: 24,
-                child: Icon(widget.icon, color: AppColor.primary_400, size: 24),
+
+              prefixIcon: Padding(
+                padding: const EdgeInsets.only(right: 12),
+                child: Icon(widget.icon, color: AppColor.primary_400),
               ),
               prefixIconConstraints: BoxConstraints(
                 minWidth: 24 + 4,
@@ -65,7 +64,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
               suffixIcon: widget.obscure
                   ? IconButton(
                       icon: Icon(
-                        _obscureText ? Icons.visibility_off : Icons.visibility,
+                        _obscureText
+                            ? Icons.visibility_off_outlined
+                            : Icons.visibility_outlined,
                         color: AppColor.primary_400,
                       ),
                       onPressed: () {
@@ -88,7 +89,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: AppColor.primary_300, width: 2),
               ),
-              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+              contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
             ),
           ),
         ),
