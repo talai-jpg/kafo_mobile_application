@@ -4,6 +4,9 @@ import 'package:kafo_app/app_color.dart';
 
 class AppTheme {
   static final ThemeData lightTheme = ThemeData(
+    // app font defult type
+    fontFamily: GoogleFonts.roboto().fontFamily,
+
     // Elvated button style
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -19,13 +22,18 @@ class AppTheme {
     ),
 
     // Text style
-    textTheme: TextTheme(
+    textTheme: ThemeData.light().textTheme.copyWith(
       headlineLarge: GoogleFonts.changa(
         fontSize: 48,
         fontWeight: FontWeight.bold,
         color: AppColor.black,
       ),
-      headlineMedium: TextStyle(fontSize: 14, color: AppColor.white),
+
+      headlineMedium: TextStyle(
+        fontSize: 15,
+        fontWeight: FontWeight.w600,
+        color: AppColor.black,
+      ),
 
       titleLarge: TextStyle(
         fontSize: 32,
@@ -47,6 +55,13 @@ class AppTheme {
           decoration: TextDecoration.underline,
         ),
       ),
+    ),
+
+    // checkbox style
+    checkboxTheme: CheckboxThemeData(
+      fillColor: WidgetStateProperty.all(AppColor.secondary_100),
+      checkColor: WidgetStateProperty.all(AppColor.primary_400),
+      side: BorderSide(color: AppColor.primary_400),
     ),
   );
 }
