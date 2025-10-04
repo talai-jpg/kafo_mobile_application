@@ -42,6 +42,7 @@ class AppColor {
   static const Color lightblue = Color(0xFFF4F8FF);
   static const Color blue_50 = Color(0x80006d77);
   static const Color blue = Color(0x80006d77);
-  static const Color tiffany= Color(0xFF036b74);
-
+  static const Color tiffany = Color(0xFF036b74);
+  static const Color tertiary = Color(0xFF63f2ff);
+  static const Color navyBlue = Color(0xFF4A739C);
 }

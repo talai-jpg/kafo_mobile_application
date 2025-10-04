@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kafo_app/app_color.dart';
+import 'package:kafo_app/common/widgets/alert_tile.dart';
 import 'package:kafo_app/features/revenue/widget/financial_summary.dart';
 import 'package:kafo_app/features/revenue/widget/general_performance_card.dart';
 import 'package:kafo_app/features/revenue/widget/stats_card.dart';
@@ -94,7 +95,36 @@ class _RevenueScreenState extends State<RevenueScreen> {
                     context,
                   ).textTheme.titleMedium?.copyWith(fontSize: 18),
                 ),
-                
+                SizedBox(height: 27),
+                FinancialSummaryWidget(),
+                SizedBox(height: 44),
+                Text(
+                  'التنبيهات المالية',
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleMedium?.copyWith(fontSize: 18),
+                ),
+                SizedBox(height: 45),
+                Column(
+                  children: [
+                    AlertTile(
+                      svgPath: 'assets/images/p.svg',
+                      color: AppColor.darkRed,
+                      text: " 10 دفعات إيجار لم تُسدّد بعد",
+                      svgWidth: 18,
+                      svgHeight: 16,
+                    ),
+                    SizedBox(height: 12),
+                    AlertTile(
+                      svgPath: 'assets/images/rain.svg',
+                      color: AppColor.lightYellow,
+                      text: '3 عقود فيها متأخرات أكثر من شهرين',
+                      svgWidth: 18,
+                      svgHeight: 16,
+                    ),
+                    SizedBox(height: 79),
+                  ],
+                ),
               ],
             ),
           ),

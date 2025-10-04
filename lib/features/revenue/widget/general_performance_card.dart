@@ -61,7 +61,7 @@ class GeneralPerformanceCard extends StatelessWidget {
                 ),
                 TextSpan(
                   text: 'آخر 12 شهر',
-                  style: TextStyle(color: Colors.grey[600], fontSize: 14),
+                  style: TextStyle(color: AppColor.navyBlue, fontSize: 16),
                 ),
               ],
             ),
@@ -77,13 +77,13 @@ class GeneralPerformanceCard extends StatelessWidget {
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text('يناير'),
-              Text('فبراير'),
-              Text('مارس'),
-              Text('أبريل'),
-              Text('مايو'),
-              Text('يونيو'),
+            children:  [
+              Text('يناير', style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColor.primary_500),),
+              Text('فبراير',style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColor.primary_500),),
+              Text('مارس',style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColor.primary_500),),
+              Text('أبريل',style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColor.primary_500),),
+              Text('مايو',style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColor.primary_500),),
+              Text('يونيو',style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColor.primary_500),),
             ],
           ),
         ],

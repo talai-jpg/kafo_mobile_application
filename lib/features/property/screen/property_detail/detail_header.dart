@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/property/models/property_model.dart';
 
 class DetailHeader extends StatelessWidget {
@@ -9,8 +10,8 @@ class DetailHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Color statusColor = property.status == 'صيانة'
-        ? Colors.red
-        : Colors.green;
+        ? AppColor.darkRed
+        : AppColor.lightYellow;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
