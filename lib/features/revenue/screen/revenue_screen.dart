@@ -94,7 +94,7 @@ class _RevenueScreenState extends State<RevenueScreen> {
                     context,
                   ).textTheme.titleMedium?.copyWith(fontSize: 18),
                 ),
-                 FinancialSummaryWidget()
+                
               ],
             ),
           ),

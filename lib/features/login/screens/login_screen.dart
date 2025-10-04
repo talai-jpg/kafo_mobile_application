@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/common/widgets/custom_text_field.dart';
+import 'package:kafo_app/features/navigation/screen/nav_screen.dart';
 import 'package:kafo_app/features/sign_up/controller/validators.dart';
 import 'package:kafo_app/features/sign_up/screen/sign_up.dart';
 
@@ -15,7 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  bool acceptTerms = false;
 
   @override
   Widget build(BuildContext context) {
@@ -100,10 +100,14 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 40,
                           child: ElevatedButton(
                             onPressed: () {
-                              if (_formKey.currentState!.validate() &&
-                                  acceptTerms) {
-                                    
-                                  }
+                              if (_formKey.currentState!.validate()) {
+                                Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => NavigationScreen(),
+                                  ),
+                                );
+                              }
                             },
                             child: Text('الدخول'),
                           ),

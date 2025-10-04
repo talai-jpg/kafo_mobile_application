@@ -157,11 +157,11 @@ class _SignUpState extends State<SignUp> {
                     child: ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate() && acceptTerms) {
-                          Navigator.push(
+                          Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
                               builder: (context) => NavigationScreen(
-                                userName: nameController.text,
+                            
                               ),
                             ),
                           );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kafo_app/features/onboarding/onboarding_screens.dart';
+import 'package:kafo_app/features/onboarding/screen/onboarding_screens.dart';
 import 'dart:async';
 
 class SplashScreen extends StatefulWidget {

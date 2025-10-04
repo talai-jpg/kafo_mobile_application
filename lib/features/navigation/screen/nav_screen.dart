@@ -3,8 +3,7 @@ import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/navigation/controller/nav_controller.dart';
 
 class NavigationScreen extends StatefulWidget {
-  final String userName;
-  const NavigationScreen({super.key, required this.userName});
+  const NavigationScreen({super.key});
 
   @override
   State<NavigationScreen> createState() => _NavigationScreenState();
@@ -16,7 +15,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
   @override
   void initState() {
     super.initState();
-    controller = NavigationController(widget.userName);
+    controller = NavigationController();
   }
 
   @override
