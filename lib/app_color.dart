@@ -34,14 +34,14 @@ class AppColor {
 
   //Green
   static const Color lightGreen = Color(0xFF84ebb4);
-  static const Color darkGreen = Color(0xFF1FC16B);
+  static const Color darkGreen = Color(0xFF088738);
   static const Color green_10 = Color(0xFF1fc16b);
 
   //blue
   //F4F8FF
   static const Color lightblue = Color(0xFFF4F8FF);
   static const Color blue_50 = Color(0x80006d77);
-  static const Color blue_ = Color(0x80006d77);
+  static const Color blue = Color(0x80006d77);
   static const Color tiffany= Color(0xFF036b74);
 
 }

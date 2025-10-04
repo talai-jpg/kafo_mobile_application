@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kafo_app/features/home/screen/home_screen.dart';
-import 'package:kafo_app/features/onboarding/onboarding_screens.dart';
-import 'package:kafo_app/features/reports/screen/reports_screen.dart';
 import 'package:kafo_app/features/splash/splash_screen.dart';
-import 'package:kafo_app/theme/app_theme.dart';
+import 'package:kafo_app/features/splash/screen/theme/app_theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
@@ -27,7 +24,7 @@ class MainApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: HomeScreen(userName: ''),
+      home: SplashScreen(),
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
     );
