@@ -20,7 +20,7 @@ class GrideScreen extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: 12,
           crossAxisSpacing: 12,
-          childAspectRatio: (size.width / 2) / 265,
+          childAspectRatio: 0.7,
         ),
         itemBuilder: (_, i) {
           final item = list[i];
