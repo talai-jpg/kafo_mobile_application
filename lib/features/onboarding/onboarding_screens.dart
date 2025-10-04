@@ -30,47 +30,59 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               screenHeight: screenHeight,
             ),
             Expanded(
-              child: PageView.builder(
-                controller: _controller,
-                itemCount: onboardingData.length,
-                onPageChanged: (index) {
-                  setState(() {
-                    _currentPage = index;
-                  });
-                },
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: screenWidth * 0.08,
+              child: Column(
+                children: [
+                  Expanded(
+                    child: PageView.builder(
+                      controller: _controller,
+                      itemCount: onboardingData.length,
+                      onPageChanged: (index) {
+                        setState(() {
+                          _currentPage = index;
+                        });
+                      },
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: screenWidth * 0.08,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              OnboardingPage(
+                                image: onboardingData[index]["image"],
+                                title: onboardingData[index]["title"],
+                                subtitle: onboardingData[index]["subtitle"],
+                                screenWidth: screenWidth,
+                                screenHeight: screenHeight,
+                              ),
+                              SizedBox(height: screenHeight * 0.02),
+                            ],
+                          ),
+                        );
+                      },
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        OnboardingPage(
-                          image: onboardingData[index]["image"],
-                          title: onboardingData[index]["title"],
-                          subtitle: onboardingData[index]["subtitle"],
-                          screenWidth: screenWidth,
-                          screenHeight: screenHeight,
-                        ),
-                        SizedBox(height: screenHeight * 0.02),
-                        OnboardingAction(
-                          currentPage: _currentPage,
-                          totalPages: onboardingData.length,
-                          controller: _controller,
-                          screenWidth: screenWidth,
-                        ),
-                        const Spacer(),
-                        OnboardingFooter(
-                          currentPage: _currentPage,
-                          totalPages: onboardingData.length,
-                          screenWidth: screenWidth,
-                          screenHeight: screenHeight,
-                        ),
-                      ],
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(screenWidth * 0.05),
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: OnboardingAction(
+                        currentPage: _currentPage,
+                        totalPages: onboardingData.length,
+                        controller: _controller,
+                        screenWidth: screenWidth,
+                      ),
                     ),
-                  );
-                },
+                  ),
+
+                  OnboardingFooter(
+                    currentPage: _currentPage,
+                    totalPages: onboardingData.length,
+                    screenWidth: screenWidth,
+                    screenHeight: screenHeight,
+                  ),
+                ],
               ),
             ),
           ],

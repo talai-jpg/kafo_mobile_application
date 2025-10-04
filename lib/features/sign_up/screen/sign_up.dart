@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/common/widgets/custom_text_field.dart';
+import 'package:kafo_app/features/login/screens/login_screen.dart';
 import 'package:kafo_app/features/navigation/screen/nav_screen.dart';
 import 'package:kafo_app/features/sign_up/controller/validators.dart';
 
@@ -179,7 +180,14 @@ class _SignUpState extends State<SignUp> {
                       ),
                       TextButton(
                         style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const LoginScreen(),
+                            ),
+                          );
+                        },
                         child: Text('سجل دخولك'),
                       ),
                     ],

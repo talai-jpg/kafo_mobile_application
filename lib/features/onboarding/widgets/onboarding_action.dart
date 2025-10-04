@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kafo_app/features/sign_up/screen/sign_up.dart';
+import 'package:kafo_app/features/login/screens/login_screen.dart';
 
 class OnboardingAction extends StatelessWidget {
   final int currentPage;
@@ -24,7 +24,7 @@ class OnboardingAction extends StatelessWidget {
           if (currentPage == totalPages - 1) {
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => const SignUp()),
+              MaterialPageRoute(builder: (context) => const LoginScreen()),
             );
           } else {
             controller.nextPage(
