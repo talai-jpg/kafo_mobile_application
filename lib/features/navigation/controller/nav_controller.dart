@@ -6,9 +6,9 @@ import 'package:kafo_app/features/revenue/screen/revenue_screen.dart';
 
 class NavigationController {
   int currentIndex = 0;
-  final String userName;
 
-  NavigationController(this.userName);
+
+  NavigationController();
 
   late final List<Widget> screens = [
     HomeScreen(userName: ' '),

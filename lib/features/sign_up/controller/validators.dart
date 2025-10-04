@@ -23,6 +23,10 @@ class Validators {
     if (value == null || value.isEmpty) {
       return "الرجاء إدخال رقم الجوال";
     }
+    if(!RegExp(r'^966\d{8,9}$').hasMatch(value)){
+      return 'الرجاء أدخال رقم جوال يبدأ ب 966';
+    }
+
     return null;
   }
 
