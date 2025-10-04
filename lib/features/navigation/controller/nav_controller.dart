@@ -13,7 +13,7 @@ class NavigationController {
   late final List<Widget> screens = [
     HomeScreen(userName: ' '),
     ReportsScreen(),
-    PropertyScreen(),
+    PropertiesScreen(),
     RevenueScreen(),
   ];
 }
