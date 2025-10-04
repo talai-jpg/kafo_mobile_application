@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/features/home/screen/home_screen.dart';
 import 'package:kafo_app/features/onboarding/onboarding_screens.dart';
 import 'package:kafo_app/features/reports/screen/reports_screen.dart';
 import 'package:kafo_app/features/splash/splash_screen.dart';
@@ -26,7 +27,7 @@ class MainApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: SplashScreen(),
+      home: HomeScreen(userName: ''),
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/features/home/widgets/costome_appar.dart';
 
 class HomeScreen extends StatelessWidget {
   final String userName;
@@ -7,6 +8,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(200.0),
+        child: CustomAppBar(),
+      ),
+    );
   }
 }
