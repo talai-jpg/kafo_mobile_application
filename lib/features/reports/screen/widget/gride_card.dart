@@ -9,29 +9,32 @@ class GrideScreen extends StatelessWidget {
   final List list;
 
   @override
-  Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.all(12),
-    child: GridView.builder(
-      physics: const BouncingScrollPhysics(),
-      itemCount: list.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        childAspectRatio: 0.70,
-        crossAxisSpacing: 12,
-        mainAxisSpacing: 12,
-      ),
-      itemBuilder: (_, i) {
-        final item = list[i];
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      child: GridView.builder(
+        physics: const BouncingScrollPhysics(),
+        itemCount: list.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 12,
+          crossAxisSpacing: 12,
+          childAspectRatio: (size.width / 2) / 265,
+        ),
+        itemBuilder: (_, i) {
+          final item = list[i];
 
-        return ReportCard(
-          title: item.title,
-          subtitle: item.subtitle,
-          imageUrl: item.imageUrl,
-          tags: item is Complaint ? item.tags : null,
-          status: item is Suggestion ? item.status : null,
-          time: item.time,
-        );
-      },
-    ),
-  );
+          return ReportCard(
+            title: item.title,
+            subtitle: item.subtitle,
+            imageUrl: item.imageUrl,
+            tags: item is Complaint ? item.tags : null,
+            status: item is Suggestion ? item.status : null,
+            time: item.time,
+          );
+        },
+      ),
+    );
+  }
 }
