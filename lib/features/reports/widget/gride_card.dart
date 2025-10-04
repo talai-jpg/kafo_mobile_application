@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kafo_app/features/reports/model/complaint_model.dart';
 import 'package:kafo_app/features/reports/model/suggestion_model.dart';
-import 'package:kafo_app/features/reports/screen/widget/report_card.dart';
+import 'package:kafo_app/features/reports/widget/report_card.dart';
 
 class GrideScreen extends StatelessWidget {
   const GrideScreen({super.key, required this.list});

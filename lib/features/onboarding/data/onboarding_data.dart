@@ -1,8 +1,10 @@
 final List<Map<String, dynamic>> onboardingData = [
   {
     "image": "assets/images/onboarding1.png",
-    "title": "ريح بالك\n ولا تشيل \nهم",
-    "subtitle": "إدارة المنتج والطلبات صارت أسهل ... كل\n شي بتطبيق واحد",
+  "title": "ريح بالك\nولا تشيل\nهم",
+
+  "subtitle": "إدارة المنتج والطلبات صارت أسهل ... كل\nشي بتطبيق واحد",
+
   },
   {
     "image": "assets/images/onboarding2.png",
