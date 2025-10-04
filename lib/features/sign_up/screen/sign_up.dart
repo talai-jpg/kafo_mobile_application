@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kafo_app/app_color.dart';
-import 'package:kafo_app/features/sign_up/controller/validators.dart';
-import 'package:kafo_app/features/sign_up/widget/custom_text_field.dart';
+import 'package:kafo_app/common/widgets/custom_text_field.dart';
 import 'package:kafo_app/features/navigation/screen/nav_screen.dart';
+import 'package:kafo_app/features/sign_up/controller/validators.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});

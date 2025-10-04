@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kafo_app/features/splash/splash_screen.dart';
+import 'package:kafo_app/features/login/screens/login_screen.dart';
 import 'package:kafo_app/theme/app_theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -24,7 +24,7 @@ class MainApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: SplashScreen(),
+      home: LoginScreen(),
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
     );
