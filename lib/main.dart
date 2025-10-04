@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kafo_app/features/onboarding/onboarding_screens.dart';
-import 'package:kafo_app/features/reports/screen/reports_screen.dart';
 import 'package:kafo_app/features/splash/splash_screen.dart';
 import 'package:kafo_app/theme/app_theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
