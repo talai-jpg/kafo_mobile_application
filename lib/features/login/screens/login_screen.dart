@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/common/widgets/custom_text_field.dart';
 import 'package:kafo_app/features/sign_up/controller/validators.dart';
+import 'package:kafo_app/features/sign_up/screen/sign_up.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -119,7 +120,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                 padding: EdgeInsets.zero,
                               ),
 
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const SignUp(),
+                                  ),
+                                );
+                              },
                               child: Text('تسجيل جديد'),
                             ),
                           ],

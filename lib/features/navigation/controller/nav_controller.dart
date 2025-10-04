@@ -11,7 +11,7 @@ class NavigationController {
   NavigationController(this.userName);
 
   late final List<Widget> screens = [
-    HomeScreen(userName: '',),
+    HomeScreen(userName: ' '),
     ReportsScreen(),
     PropertyScreen(),
     RevenueScreen(),

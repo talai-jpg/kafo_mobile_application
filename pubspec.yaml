@@ -10,11 +10,10 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_localization: ^0.3.3
-  flutter_localizations: 
+  flutter_localizations:
     sdk: flutter
   flutter_screenutil: ^5.9.3
   google_fonts: ^6.3.2
-  
 
 dev_dependencies:
   flutter_test:

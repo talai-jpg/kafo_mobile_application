@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kafo_app/features/sign_up/screen/sign_up.dart';
+import 'package:kafo_app/features/login/screens/login_screen.dart';
 
 class OnboardingFooter extends StatelessWidget {
   final int currentPage;
@@ -29,7 +29,7 @@ class OnboardingFooter extends StatelessWidget {
         color: const Color(0xffefe8e8),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
+            color: Color.fromRGBO(128, 128, 128, 0.2),
             spreadRadius: 2,
             blurRadius: 6,
             offset: const Offset(0, 3),
@@ -52,7 +52,7 @@ class OnboardingFooter extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const SignUp()),
+                  MaterialPageRoute(builder: (context) => const LoginScreen()),
                 );
               },
               child: Text(

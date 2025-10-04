@@ -7,6 +7,7 @@ class AppColor {
   static const Color primary_300 = Color(0xFF429c75);
   static const Color primary_200 = Color(0xFF429c75);
   static const Color primary_100 = Color(0xFF68bf98);
+  static const Color chipColor = Color(0x1A2D6A4F);
 
   //Secondary
   static const Color secondary_500 = Color(0xFF674747);
