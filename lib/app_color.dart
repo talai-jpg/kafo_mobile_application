@@ -21,4 +21,27 @@ class AppColor {
   static const Color black = Color(0xFF000000);
   static const Color containerShadow = Color(0x40000000);
   static const Color grey = Color(0xFFB1B1B1);
+
+  //red
+  static const Color lightRed = Color(0xFFfb3748);
+  static const Color darkRed = Color(0xFFd00416);
+  static const Color red_100 = Color(0xFFfb3748);
+
+  //Yellow
+  static const Color lightYellow = Color(0xFFffdb43);
+  static const Color darkYellow = Color(0xFFdfb400);
+  static const Color yellow_10 = Color(0xFFffdb43);
+
+  //Green
+  static const Color lightGreen = Color(0xFF84ebb4);
+  static const Color darkGreen = Color(0xFF1FC16B);
+  static const Color green_10 = Color(0xFF1fc16b);
+
+  //blue
+  //F4F8FF
+  static const Color lightblue = Color(0xFFF4F8FF);
+  static const Color blue_50 = Color(0x80006d77);
+  static const Color blue_ = Color(0x80006d77);
+  static const Color tiffany= Color(0xFF036b74);
+
 }
