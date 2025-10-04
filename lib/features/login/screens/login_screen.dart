@@ -101,7 +101,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: ElevatedButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate() &&
-                                  acceptTerms) {}
+                                  acceptTerms) {
+                                    
+                                  }
                             },
                             child: Text('الدخول'),
                           ),
