@@ -1,4 +1,4 @@
-# 🏢 Kafu – Property Management App
+# 🏢 Kafo – Property Management App
 
 ## Project Overview
 Property owners face many challenges that affect their daily management, such as:
@@ -7,7 +7,7 @@ Property owners face many challenges that affect their daily management, such as
 - Delays in property and facility maintenance.
 - Difficulty communicating with tenants and tracking complaints.
 
-**Kafu** provides a **comprehensive property management solution** by consolidating properties, complaints, and payments into a **single real-time dashboard**, making decision-making easier and reducing waste.
+**Kafo** provides a **comprehensive property management solution** by consolidating properties, complaints, and payments into a **single real-time dashboard**, making decision-making easier and reducing waste.
 
 
 ## Design Prototype 
