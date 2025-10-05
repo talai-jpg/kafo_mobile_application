@@ -14,6 +14,7 @@ Property owners face many challenges that affect their daily management, such as
 https://www.figma.com/design/N4wcXp3D0vrvNwiQuMX90u/%D9%83%D9%81%D9%88?node-id=89-12187&t=2hmDgqS92N0tpTVz-0
 
 ## Output
+https://drive.google.com/file/d/1cq2g_Qw36gkfxIsB-pb273ySi20q9Xxt/view?usp=sharing
 
 ## Features
 ## Key Features
