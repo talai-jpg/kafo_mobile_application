@@ -3,8 +3,6 @@ import 'package:kafo_app/features/home/widgets/costome_appar.dart';
 import 'package:kafo_app/features/home/widgets/costume_grid.dart';
 import 'package:kafo_app/features/home/widgets/income.dart';
 import 'package:kafo_app/features/reports/data/complaint_data.dart';
-import 'package:kafo_app/features/reports/data/suggestion_data.dart';
-import 'package:kafo_app/features/reports/screen/widget/gride_card.dart';
 
 import '../widgets/propertie_section.dart';
 

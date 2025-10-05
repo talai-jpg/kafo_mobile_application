@@ -61,7 +61,7 @@ class MaintenanceTab extends StatelessWidget {
                 title: 'تسريب ماء',
                 description: 'شقة 12 - الدور الأرضي - عمارة النور',
                 priority: 'عاجل',
-                priorityColor: Color(0xffd00416),
+                priorityColor: AppColor.darkRed,
                 supervisor: 'أحمد. س. سباكة',
                 location: 'الرياض - حي النور',
                 date: '01/02/2024',
@@ -72,7 +72,7 @@ class MaintenanceTab extends StatelessWidget {
                 title: 'انقطاع كهرباء الدور الأرضي',
                 description: 'شقة 12 - الدور الأرضي - عمارة النور',
                 priority: 'قيد التنفيذ',
-                priorityColor: Color(0xffdfb400),
+                priorityColor: AppColor.darkYellow,
                 supervisor: 'أحمد. س. كهرباء',
                 location: 'الرياض - حي النور',
                 date: '01/02/2024',
@@ -176,7 +176,7 @@ class MaintenanceTab extends StatelessWidget {
                 ),
                 label: const Text('التفاصيل'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
+                  backgroundColor: AppColor.primary_300,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 14,
                     vertical: 4,

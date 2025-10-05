@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kafo_app/features/reports/model/complaint_model.dart';
 import 'package:kafo_app/features/reports/model/suggestion_model.dart';
-import 'package:kafo_app/features/reports/screen/widget/report_card.dart';
+
+import '../../reports/widget/report_card.dart';
 
 class GrideCustome extends StatelessWidget {
   const GrideCustome({super.key, required this.list});

@@ -22,7 +22,6 @@ class ReportCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // تم حذف الارتفاع الثابت لتمكين المحتوى من تحديد ارتفاعه
       margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -46,7 +45,7 @@ class ReportCard extends StatelessWidget {
                 child: Image.asset(
                   imageUrl,
                   width: double.infinity,
-                  height: 120, // تم تقليل الارتفاع للمساعدة في حل مشكلة التجاوز
+                  height: 105, //
                   fit: BoxFit.cover,
                 ),
               ),
@@ -101,7 +100,7 @@ class ReportCard extends StatelessWidget {
                     ],
                   ),
                 ],
-                const SizedBox(height: 5), // تم تقليل المسافة
+                const SizedBox(height: 1), // تم تقليل المسافة
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColor.primary_400,

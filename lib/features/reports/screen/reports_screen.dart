@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/reports/data/suggestion_data.dart';
 import 'package:kafo_app/features/reports/data/complaint_data.dart';
-// تأكد أن الموديلز موجودة
-import 'package:kafo_app/features/reports/model/complaint_model.dart';
-import 'package:kafo_app/features/reports/model/suggestion_model.dart';
-// تأكد من المسارات الصحيحة
-import 'package:kafo_app/features/reports/screen/widget/gride_card.dart';
-import 'package:kafo_app/features/reports/screen/widget/report_card.dart';
+import 'package:kafo_app/features/reports/widget/gride_card.dart';
 
 class ReportsScreen extends StatefulWidget {
   const ReportsScreen({super.key});
