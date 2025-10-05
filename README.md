@@ -1,4 +1,4 @@
-# 🏢 Kafu – Arabic Property Management App
+# 🏢 Kafu – Property Management App
 
 ## Project Overview
 Property owners face many challenges that affect their daily management, such as:
