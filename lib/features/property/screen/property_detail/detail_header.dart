@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/property/models/property_model.dart';
 
 class DetailHeader extends StatelessWidget {
@@ -10,7 +11,7 @@ class DetailHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final Color statusColor = property.status == 'صيانة'
         ? Colors.red
-        : Colors.green;
+        : AppColor.primary_400;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -53,7 +54,7 @@ class DetailHeader extends StatelessWidget {
                 child: Text(
                   property.type,
                   style: const TextStyle(
-                    color: Colors.green,
+                    color: AppColor.primary_400,
                     fontWeight: FontWeight.bold,
                     fontSize: 12,
                   ),
@@ -70,7 +71,10 @@ class DetailHeader extends StatelessWidget {
           // Location
           Row(
             children: [
-              const Icon(Icons.location_on_outlined, color: Colors.green),
+              const Icon(
+                Icons.location_on_outlined,
+                color: AppColor.primary_400,
+              ),
               const SizedBox(width: 6),
               Text(
                 property.location,
@@ -85,7 +89,7 @@ class DetailHeader extends StatelessWidget {
             children: [
               const Icon(
                 Icons.attach_money_rounded,
-                color: Colors.green,
+                color: AppColor.primary_400,
                 size: 22,
               ),
               const SizedBox(width: 6),
@@ -99,7 +103,7 @@ class DetailHeader extends StatelessWidget {
                     TextSpan(
                       text: property.revenue,
                       style: const TextStyle(
-                        color: Colors.green,
+                        color: AppColor.primary_400,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

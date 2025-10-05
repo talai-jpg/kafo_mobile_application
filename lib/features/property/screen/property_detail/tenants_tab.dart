@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/property/models/property_model.dart';
 
 class TenantsTab extends StatelessWidget {
@@ -16,12 +17,12 @@ class TenantsTab extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: const [
-              Icon(Icons.add_circle_outline, color: Colors.green),
+              Icon(Icons.add_circle_outline, color: AppColor.primary_400),
               SizedBox(width: 6),
               Text(
                 'إضافة مستأجر جديد',
                 style: TextStyle(
-                  color: Colors.green,
+                  color: AppColor.primary_400,
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
                 ),
@@ -53,7 +54,7 @@ class TenantsTab extends StatelessWidget {
               _tenantCard(
                 name: 'أحمد محمد',
                 status: 'نشط',
-                statusColor: Colors.green,
+                statusColor: AppColor.primary_400,
                 propertyName: 'شقة 12 - الدور الثالث | عمارة النور',
                 openReports: 2,
                 address: 'الرياض، الشبلية',
@@ -87,7 +88,7 @@ class TenantsTab extends StatelessWidget {
   static Widget _filterChip(String label, {bool selected = false}) {
     return Chip(
       label: Text(label),
-      backgroundColor: selected ? Color(0xff2d6a4f) : Colors.grey[200],
+      backgroundColor: selected ? AppColor.primary_400 : Colors.grey[200],
       labelStyle: TextStyle(
         color: selected ? Colors.white : Colors.black87,
         fontSize: 13,

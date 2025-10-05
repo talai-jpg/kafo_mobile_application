@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/app_color.dart';
 import '../models/property_model.dart';
 
 class PropertyCard extends StatelessWidget {
@@ -10,7 +11,7 @@ class PropertyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Color statusColor = property.status == 'مؤجر'
-        ? Colors.green
+        ? AppColor.primary_400
         : Colors.red;
 
     return GestureDetector(
@@ -83,7 +84,7 @@ class PropertyCard extends StatelessWidget {
                         child: Text(
                           property.type,
                           style: const TextStyle(
-                            color: Colors.green,
+                            color: AppColor.primary_400,
                             fontSize: 12,
                             fontWeight: FontWeight.bold,
                           ),

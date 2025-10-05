@@ -32,7 +32,7 @@ class AppTheme {
       headlineMedium: TextStyle(
         fontSize: 15,
         fontWeight: FontWeight.w600,
-        color: AppColor.primary_500,
+        color: AppColor.primary_400,
       ),
 
       titleLarge: TextStyle(
@@ -40,7 +40,11 @@ class AppTheme {
         fontWeight: FontWeight.bold,
         color: AppColor.white,
       ),
-      titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      titleMedium: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: AppColor.black,
+      ),
 
       titleSmall: TextStyle(
         fontSize: 14,

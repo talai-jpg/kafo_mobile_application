@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/app_color.dart';
 
 class AlertsBoard extends StatelessWidget {
   const AlertsBoard({super.key});
@@ -24,7 +25,7 @@ class AlertsBoard extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
-                color: Colors.green,
+                color: AppColor.primary_400,
               ),
             ),
           ],

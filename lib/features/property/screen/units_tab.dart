@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/property/models/property_model.dart';
 
 class UnitsTab extends StatelessWidget {
@@ -16,12 +17,12 @@ class UnitsTab extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: const [
-              Icon(Icons.add_circle_outline, color: Colors.green),
+              Icon(Icons.add_circle_outline, color: AppColor.primary_400),
               SizedBox(width: 6),
               Text(
                 'إضافة وحدة جديدة',
                 style: TextStyle(
-                  color: Colors.green,
+                  color: AppColor.primary_400,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -67,7 +68,7 @@ class UnitsTab extends StatelessWidget {
   static Widget _filterChip(String label, {bool selected = false}) {
     return Chip(
       label: Text(label),
-      backgroundColor: selected ? Colors.green : Colors.grey[200],
+      backgroundColor: selected ? AppColor.primary_400 : Colors.grey[200],
       labelStyle: TextStyle(
         color: selected ? Colors.white : Colors.black87,
         fontWeight: FontWeight.bold,
@@ -89,7 +90,7 @@ class UnitsTab extends StatelessWidget {
         ? Colors.red
         : status == 'متاح'
         ? Colors.grey
-        : Colors.green;
+        : AppColor.primary_400;
 
     return Container(
       decoration: BoxDecoration(
@@ -137,12 +138,16 @@ class UnitsTab extends StatelessWidget {
                       ),
                       child: Row(
                         children: const [
-                          Icon(Icons.apartment, size: 12, color: Colors.green),
+                          Icon(
+                            Icons.apartment,
+                            size: 12,
+                            color: AppColor.primary_400,
+                          ),
                           SizedBox(width: 3),
                           Text(
                             'شقة',
                             style: TextStyle(
-                              color: Colors.green,
+                              color: AppColor.primary_400,
                               fontWeight: FontWeight.bold,
                               fontSize: 12,
                             ),
@@ -232,7 +237,7 @@ class UnitsTab extends StatelessWidget {
                       const Icon(
                         Icons.location_on_outlined,
                         size: 16,
-                        color: Colors.green,
+                        color: AppColor.primary_400,
                       ),
                       const SizedBox(width: 4),
                       Expanded(
@@ -253,7 +258,7 @@ class UnitsTab extends StatelessWidget {
                       const Icon(
                         Icons.square_foot_outlined,
                         size: 16,
-                        color: Colors.green,
+                        color: AppColor.primary_400,
                       ),
                       const SizedBox(width: 4),
                       Text(
@@ -281,7 +286,7 @@ class UnitsTab extends StatelessWidget {
                           Text(
                             rent,
                             style: const TextStyle(
-                              color: Colors.green,
+                              color: AppColor.primary_400,
                               fontWeight: FontWeight.bold,
                               fontSize: 13,
                             ),
@@ -315,7 +320,7 @@ class UnitsTab extends StatelessWidget {
                             Icon(
                               Icons.arrow_back_ios_new,
                               size: 12,
-                              color: Colors.green,
+                              color: AppColor.primary_400,
                             ),
                           ],
                         ),
