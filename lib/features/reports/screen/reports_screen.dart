@@ -4,7 +4,6 @@ import 'package:kafo_app/features/reports/data/suggestion_data.dart';
 import 'package:kafo_app/features/reports/data/complaint_data.dart';
 import 'package:kafo_app/features/reports/widget/gride_card.dart';
 
-
 class ReportsScreen extends StatefulWidget {
   const ReportsScreen({super.key});
 
@@ -25,9 +24,26 @@ class _ReportsScreenState extends State<ReportsScreen>
   }
 
   @override
+  void dispose() {
+    _tab.dispose();
+    super.dispose();
+  }
+
+  // دالة لجلب القائمة (للتصفية)
+  List _getFilteredList(bool isComplaints) {
+    final baseList = isComplaints
+        ? ComplaintData.getComplaints()
+        : SuggestionData.getSuggestions();
+    // (منطق التصفية الفعلي يجب أن يُطبق هنا بناءً على 'selectedChip')
+    return baseList;
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final suggestions = SuggestionData.getSuggestions();
-    final complaints = ComplaintData.getComplaints();
+    // حساب ارتفاع الشاشة المتبقي (أو ارتفاع كبير جداً)
+    final screenHeight = MediaQuery.of(context).size.height;
+    // تقدير الارتفاع الثابت للأعلى (AppBar + Filter Chips) حوالي 180 بكسل
+    const double fixedTopHeight = 180.0;
 
     return Scaffold(
       backgroundColor: Colors.grey[100],
@@ -48,20 +64,30 @@ class _ReportsScreenState extends State<ReportsScreen>
           ],
         ),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _buildFilterChips(),
-          Expanded(
-            child: TabBarView(
-              controller: _tab,
-              children: [
-                GrideScreen(list: complaints),
-                GrideScreen(list: suggestions),
-              ],
+
+      // **تغليف المحتوى بالكامل بـ SingleChildScrollView**
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end, // تم التعديل إلى اليمين
+          children: [
+            _buildFilterChips(),
+
+            // **استخدام SizedBox بدلاً من Expanded مع تحديد ارتفاع**
+            SizedBox(
+              // تحديد الارتفاع المتبقي من الشاشة + قيمة إضافية تسمح بالتمرير
+              height: screenHeight - fixedTopHeight + 1.0,
+              child: TabBarView(
+                // منع الـ TabBarView من التمرير الداخلي لمنع تداخل التمرير
+                physics: const NeverScrollableScrollPhysics(),
+                controller: _tab,
+                children: [
+                  GrideScreen(list: _getFilteredList(true)),
+                  GrideScreen(list: _getFilteredList(false)),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -70,6 +96,7 @@ class _ReportsScreenState extends State<ReportsScreen>
     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      textDirection: TextDirection.rtl, // لضمان ترتيب العناصر بالشكل الصحيح
       children: [
         Expanded(
           child: SingleChildScrollView(
@@ -82,7 +109,6 @@ class _ReportsScreenState extends State<ReportsScreen>
                   padding: const EdgeInsets.only(left: 20),
                   child: ChoiceChip(
                     showCheckmark: false,
-
                     label: Text(
                       chipLabels[i],
                       style: Theme.of(context).textTheme.titleMedium,

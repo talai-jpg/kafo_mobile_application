@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/property/widgets/alerts_board.dart';
 import '../data/property_data.dart';
 import '../widgets/stat_card.dart';
@@ -79,7 +80,7 @@ class PropertiesScreen extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
-                    color: Colors.green,
+                    color: AppColor.primary_400,
                   ),
                 ),
               ],

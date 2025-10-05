@@ -22,12 +22,13 @@ class ReportCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey,
+            color: Colors.grey.withOpacity(0.3),
             blurRadius: 6,
             offset: const Offset(0, 3),
           ),
@@ -39,11 +40,14 @@ class ReportCard extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Image.asset(
-                imageUrl,
-                width: double.infinity,
-                height: 130,
-                fit: BoxFit.cover,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  imageUrl,
+                  width: double.infinity,
+                  height: 105, //
+                  fit: BoxFit.cover,
+                ),
               ),
               Positioned(
                 right: 8,
@@ -58,8 +62,8 @@ class ReportCard extends StatelessWidget {
                                 child: _buildTag(
                                   t,
                                   t == "عاجل"
-                                      ? Color(0xff284a33)
-                                      : Color(0xff725655),
+                                      ? const Color.fromARGB(255, 108, 49, 46)
+                                      : const Color(0xff284a33),
                                 ),
                               ),
                             )
@@ -73,18 +77,9 @@ class ReportCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
-                ),
+                Text(title, style: Theme.of(context).textTheme.headlineMedium),
                 const SizedBox(height: 4),
-                Text(
-                  subtitle,
-                  style: const TextStyle(color: Colors.grey, fontSize: 13),
-                ),
+                Text(subtitle, style: Theme.of(context).textTheme.titleSmall),
                 if (time != null) ...[
                   const SizedBox(height: 2),
                   Row(
@@ -105,13 +100,13 @@ class ReportCard extends StatelessWidget {
                     ],
                   ),
                 ],
-                const SizedBox(height: 8),
+                const SizedBox(height: 1), // تم تقليل المسافة
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColor.primary_400,
-                    minimumSize: const Size(double.infinity, 36),
+                    fixedSize: const Size(85, 27),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(10),
                     ),
                   ),
                   onPressed: () {},
@@ -138,7 +133,7 @@ class ReportCard extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.bold,
           fontSize: 12,

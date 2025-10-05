@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kafo_app/app_color.dart';
 import 'package:kafo_app/features/property/models/property_model.dart';
 import 'package:kafo_app/features/property/screen/property_detail/detail_header.dart';
 import 'package:kafo_app/features/property/screen/property_detail/maintenance_tab.dart';
@@ -60,9 +61,9 @@ class PropertyDetailScreen extends StatelessWidget {
                     DetailHeader(property: property),
 
                     const TabBar(
-                      labelColor: Colors.green,
+                      labelColor: AppColor.primary_400,
                       unselectedLabelColor: Colors.black54,
-                      indicatorColor: Colors.green,
+                      indicatorColor: AppColor.primary_400,
                       tabs: [
                         Tab(text: 'الوحدات'),
                         Tab(text: 'المستأجرين'),

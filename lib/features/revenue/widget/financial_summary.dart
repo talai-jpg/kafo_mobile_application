@@ -30,15 +30,14 @@ class FinancialSummaryWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(4.75),
-      
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Column(
+          Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              _LegendItem(
+              const _LegendItem(
                 icon: Icons.location_city,
                 text: "عمارة حي اليرموك",
                 color: AppColor.blue,
@@ -132,10 +131,7 @@ class _LegendItem extends StatelessWidget {
         children: [
           Icon(icon, size: 13, color: color),
           const SizedBox(width: 4),
-          Text(
-            text,
-            style:Theme.of(context).textTheme.titleSmall,
-          ),
+          Text(text, style: Theme.of(context).textTheme.titleSmall),
         ],
       ),
     );
