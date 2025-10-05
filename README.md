@@ -25,7 +25,7 @@ https://www.figma.com/design/N4wcXp3D0vrvNwiQuMX90u/%D9%83%D9%81%D9%88?node-id=8
 ## Tech Stack
 - **Programming Language**: Dart
 - **Framework**: Flutter
-- **Packages & Libraries**: Listed in the "Packages Used" page
+
 
 ## Widgets and External Packages Used
   - **flutter_svg** for SVG support
